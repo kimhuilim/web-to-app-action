@@ -1,7 +1,7 @@
-name: "Website to APK Action"
+name: "HTML to APK Action"
 description: "Build folder path of html and creates an APK for it."
 branding:
-  color: 'blue'
+  color: 'purple'
   icon: 'smartphone'
 inputs:
   build-folder-path: 
