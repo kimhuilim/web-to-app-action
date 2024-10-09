@@ -14,6 +14,11 @@ inputs:
     required: false
     default: "MyApp"
 
+  app-id-apk: 
+    description: "ID of App (No Spaces)"
+    required: true
+    default: "myappid"
+
   output-folder-path:
     description: "Path to output folder"
     required: false
@@ -44,7 +49,7 @@ runs:
         npm init -y
         npm install @capacitor/core
         npm install @capacitor/cli --save-dev
-        echo '{"appId": "io.ionic.${{ inputs.app-name }}","appName": "${{ inputs.app-name }}","bundledWebRuntime": false,"npmClient": "npm","webDir": "build","cordova": {}}' > capacitor.config.json
+        echo '{"appId": "io.ionic.${{ inputs.app-id-apk }}","appName": "${{ inputs.app-name }}","bundledWebRuntime": false,"npmClient": "npm","webDir": "build","cordova": {}}' > capacitor.config.json
         echo '{"name": "${{ inputs.app-name }}","integrations": {"capacitor": {}},"type": "react"}' > ionic.config.json
         cat ionic.config.json
         cat capacitor.config.json
