@@ -30,6 +30,7 @@ runs:
     - name: Setup JDK
       uses: actions/setup-java@v4
       with:
+        distribution: 'oracle'
         java-version: 21
 
     - uses: actions/setup-node@v4
